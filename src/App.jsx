@@ -203,7 +203,7 @@ function Footer() {
             <div className="space-y-3">
               <div className="flex items-center text-sm text-gray-400">
                 <Mail className="h-4 w-4 mr-3" />
-                <span>contact@basilmhantash.com</span>
+                <span>basil@basilmhantash.com</span>
               </div>
             </div>
           </div>
