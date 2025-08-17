@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import { BookOpen, FileText, Award } from 'lucide-react';
+import { BookOpen, FileText, Award, Mic, Users, Calendar, ExternalLink } from 'lucide-react';
 
-function Publications() {
+function RD() {
   return (
     <div className="bg-black min-h-screen">
       {/* Hero Section */}
@@ -10,10 +10,10 @@ function Publications() {
         <div className="luxury-container">
           <div className="text-center mb-16">
             <div className="text-sm font-medium tracking-wider text-gray-400 uppercase mb-4">
-              Scientific Contributions
+              Research & Development
             </div>
             <h1 className="luxury-text-5xl luxury-text-gradient mb-8">
-              Publications & Intellectual Property
+              Innovation & Intellectual Leadership
             </h1>
             <p className="luxury-text-xl max-w-4xl mx-auto">
               A comprehensive portfolio of peer-reviewed research, breakthrough patents, 
@@ -51,11 +51,11 @@ function Publications() {
         </div>
       </section>
 
-      {/* Sub-navigation for Publications and Patents */}
+      {/* Sub-navigation for Publications, Patents and Presentations */}
       <nav className="bg-gray-900 py-4">
         <div className="luxury-container flex justify-center space-x-8">
           <NavLink 
-            to="/publications-ip/publications" 
+            to="/rd/publications" 
             className={({ isActive }) => 
               `flex items-center space-x-2 text-lg font-medium ${isActive ? 'text-white' : 'text-gray-400 hover:text-white'}`
             }
@@ -64,13 +64,22 @@ function Publications() {
             <span>Publications</span>
           </NavLink>
           <NavLink 
-            to="/publications-ip/patents" 
+            to="/rd/patents" 
             className={({ isActive }) => 
               `flex items-center space-x-2 text-lg font-medium ${isActive ? 'text-white' : 'text-gray-400 hover:text-white'}`
             }
           >
             <Award className="h-5 w-5" />
             <span>Patents & IP</span>
+          </NavLink>
+          <NavLink 
+            to="/rd/presentations" 
+            className={({ isActive }) => 
+              `flex items-center space-x-2 text-lg font-medium ${isActive ? 'text-white' : 'text-gray-400 hover:text-white'}`
+            }
+          >
+            <Mic className="h-5 w-5" />
+            <span>Presentations</span>
           </NavLink>
         </div>
       </nav>
@@ -151,5 +160,5 @@ function Publications() {
   );
 }
 
-export default Publications;
+export default RD;
 
